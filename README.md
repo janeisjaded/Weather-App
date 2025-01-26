@@ -28,7 +28,3 @@ Get All Favorites Route Name: /api/favorites Request Type: GET Purpose: Retrieve
 Add to Favorites Route Name: /api/favorites Request Type: POST Purpose: Adds a location to the user's favorites. Request Format: { "city": "London", "latitude": 51.5074, "longitude": -0.1278 } Response Format: { "status": "success", "message": "Location added to favorites" } Example: curl -X POST -H "Content-Type: application/json" -d '{"city": "London", "latitude": 51.5074, "longitude": -0.1278}' http://localhost:5001/api/favorites
 
 Remove from Favorites Route Name: /api/favorites Request Type: DELETE Purpose: Removes a location from the user's favorites by ID. Request Format: { "location_id": 1 } Response Format: { "status": "success", "message": "Location removed from favorites" } Example: curl -X DELETE -H "Content-Type: application/json" -d '{"location_id": 1}' http://localhost:5001/api/favorites
-
-Setup Instructions Environment Variables: Set up an .env file with the following: API_KEY=6ac72ba90c795f7036e775e9b1cc90cf Running the App: Clone the repository: git clone https://github.com/eshaaw/cs411-finalproject.git cd weather-app
-
-Build and run the Docker container: docker build -t weather-app . docker run -p 5000:5000 weather-app Access the app at http://localhost:5001.
